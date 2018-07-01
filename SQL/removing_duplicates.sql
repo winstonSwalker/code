@@ -1,5 +1,4 @@
 --this query removes dups from a generic install table
---this is going to be very time consuming and it's best to have this kind of a query run on a standard etl
 
 with dup_install as (
 	select
@@ -15,6 +14,6 @@ with dup_install as (
 		,source
 	from dup_install
 	where 1=1
-		and rown =1
+		and rown =1 --this will take the first install for ever id
 		)
 select * from no_dup_install
