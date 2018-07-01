@@ -1,4 +1,4 @@
 # code
-various useful code I've picked up over the years
+This repository contains various useful code I've picked up over the years
 
-uses generic tables
+They use generic tables which are explained in the comments
