@@ -1,7 +1,7 @@
 # SQL Code
 This code uses some of my favorite SQL code (eg: CTEs & row_number())
 
-It references generic tables listed below:
+The queries reference the generic tables listed below:
 
 **install**: Record of all installs for an app
 * *id*: id for a person
