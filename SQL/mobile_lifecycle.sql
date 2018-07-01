@@ -1,25 +1,6 @@
 --this query creates a lifecycle of mobile users to assess where users are being lost in the lifecycle funnel of using an app
 --this is going to be very time consuming and it's best to have this kind of a query run on a standard etl
 
---"app_open" table columns:
-----id: id for a person
-----timestamp: 'yyyy-mm-dd hh:mm:ss' format of the time of the app open
-
---"ftue" table columns:
-----id: id for a person
-----timestamp: 'yyyy-mm-dd hh:mm:ss' format of the time of the app open
-----step: which step of the ftue the user is in (for this table 1 = started ftue and 10 = finished ftue)
-
---"engagement" table columns:
-----id: id for a person
-----timestamp: 'yyyy-mm-dd hh:mm:ss' format of the time of the app open
-----activity: which feature the user is engaging in (for this table: menu, click, use)
-
---"payment" table columns:
-----id: id for a person
-----timestamp: 'yyyy-mm-dd hh:mm:ss' format of the time of the payment
-----revenue: $ value of payment in US dollars
-
 with install as (
 	select
 		id

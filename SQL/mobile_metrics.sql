@@ -1,17 +1,8 @@
 --this query creates basic daily metrics (retention/arpi/arppu/conversion) for d1/d7/d14/d28 based off of a generic app open table and payment
 --this is going to be very time consuming and it's best to have this kind of a query run on a standard etl
 
---"app_open" table columns:
-----id: id for a person
-----timestamp: 'yyyy-mm-dd hh:mm:ss' format of the time of the app open
-
---"payment" table columns:
-----id: id for a person
-----timestamp: 'yyyy-mm-dd hh:mm:ss' format of the time of the payment
-----revenue: $ value of payment in US dollars
-
-with --with clauses (also known as 'CTEs') make it easier to write code 
-dau as(
+--with clauses (also known as 'CTEs') make it easier to write code 
+with dau as ( 
 	select 
 		id
 		,date(timestamp) as dau_date --may need to use a different function for date depending on the sql language
@@ -29,7 +20,7 @@ install as (
 		id
 		,min(dau_date) as install_date --commas at the beginning of select terms is a personal preference
 		,(date(getdate())-1)-min(dau_date) as days_since_install --going to be very important in the 'metrics' cte
-	from dau
+	from dau -- in this situation I'm assuming the first app open is 'install'
 	group by 
 		id
 		)
