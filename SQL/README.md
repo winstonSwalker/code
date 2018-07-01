@@ -1,7 +1,7 @@
 # SQL Code
 This code uses some of my favorite SQL code from CTEs to row_number().  
 
-While I like using CTEs, they may prove very time consuming on large data sets.  On large data sets use a regular etl process to generate a series of indexed static tables instead of using CTEs.
+While I like using CTEs, they may prove very time consuming on large data sets.  If you find that happening then use regular etl processes to generate a series of indexed static tables instead of using CTEs.
 
 The queries in this folder reference the generic tables listed below:
 
