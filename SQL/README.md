@@ -1,5 +1,7 @@
 # SQL Code
-This code uses some of my favorite SQL code from CTEs to row_number().  Please note that these queries may be very time consuming by creating CTEs from raw event data.  It's generally best to have each CTE --may be time consuming depending on the size of the table.  Instead of using ctes, it's best to generate a series of indexed static tables from a regular etl process
+This code uses some of my favorite SQL code from CTEs to row_number().  
+
+While I like using CTEs, they may prove very time consuming on large data sets. It's generally best to have each CTE.  On large data sets use a regular etl process to generate a series of indexed static tables instead of using CTEs.
 
 The queries in this folder reference the generic tables listed below:
 
