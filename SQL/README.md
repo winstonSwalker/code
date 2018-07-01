@@ -15,7 +15,7 @@ It references generic tables listed below:
 **ftue**: Also known as the "first time user experience". This contains a record of all of the steps users perform in a ftue.
 * *id*: id for a person
 * *timestamp*: 'yyyy-mm-dd hh:mm:ss' format of the time of ftue engagement
-* *step*: which step of the ftue the user is in (for this table 1 = started ftue and 10 = finished ftue)
+* *step*: which step of the ftue the user has performed (for this example table: 1 = "started ftue" and 10 = "finished ftue")
 
 **engagement** Contains all engagements (actions in an app) users perform
 * *id*: id for a person
