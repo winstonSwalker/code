@@ -1,4 +1,5 @@
 # SQL Code
+
 This code uses some of my favorite SQL code (eg: CTEs & row_number())
 
 It references generic tables listed below:
@@ -26,4 +27,3 @@ It references generic tables listed below:
 *id*: id for a person
 *timestamp*: 'yyyy-mm-dd hh:mm:ss' format of the time of the payment
 *revenue*: $ value of payment in US dollars
-
