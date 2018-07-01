@@ -1,4 +1,4 @@
---this query creates a lifecycle of mobile users to assess where users are being lost
+--this query creates a lifecycle of mobile users to assess where users are being lost in the lifecycle funnel of using an app
 --this is going to be very time consuming and it's best to have this kind of a query run on a standard etl
 
 --"app_open" table columns:

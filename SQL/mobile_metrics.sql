@@ -94,12 +94,13 @@ metrics as(
 		,count(distinct d.id)/count(distinct a.id) as conv_total
 		
 	from install a
-	left join dau b
-		on a.id = b.id
-	left join revenue c
-		on a.id = c.id
-	left join customers d
-		on a.id = d.id
-	group by a.install_date
+		left join dau b
+			on a.id = b.id
+		left join revenue c
+			on a.id = c.id
+		left join customers d
+			on a.id = d.id
+	group by 
+		a.install_date
 )
 select * from install -- I usually do a select * from the final table as a personal preference
