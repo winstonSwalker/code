@@ -1,5 +1,5 @@
 --this query creates basic daily metrics (retention/arpi/arppu/conversion) for d1/d7/d14/d28 based off of a generic app open table and payment
---this is going to be very time consuming and it's best to have this kind of a query run on a standard etl
+--this is going to be very time consuming and it's best to have each cte run regularly as a static table on a standard etl
 
 --with clauses (also known as 'CTEs') make it easier to write code 
 with dau as ( 
