@@ -3,7 +3,7 @@ This code uses some of my favorite SQL code from CTEs to row_number().
 
 While I like using CTEs, they may prove very time consuming on large data sets.  If you find that happening then use regular etl processes to regularly generate a series of indexed static tables instead of using CTEs.
 
-The queries in this folder reference the generic tables listed below:
+The queries in this folder reference the generic tables outlined below:
 
 **install**: Record of all installs for an app
 * *id*: id for a person
