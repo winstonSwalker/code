@@ -6,7 +6,6 @@ It references generic tables listed below:
 **install**
 
 *id*: id for a person
-
 *timestamp*: 'yyyy-mm-dd hh:mm:ss' format of the time of the install
 
 *source*: where the install came from
