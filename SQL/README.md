@@ -1,9 +1,6 @@
 # SQL Code
 This code uses some of my favorite SQL techniques from CTEs to the row_number() function.  
 
-While I like using CTEs, they may prove very time consuming on large data sets.  
-If you find that happening then use series of indexed static tables (with a regular etl update) instead of using CTEs.
-
 The queries in this folder reference the generic tables outlined below:
 
 **install**: Record of all installs for an app
