@@ -63,25 +63,17 @@ metrics as(
 		,count(distinct(case when b.dau_date-a.install_date = 14 and a.days_since_install >=14 then b.id else null end))/count(distinct a.id) as ret_d14
 		,count(distinct(case when b.dau_date-a.install_date = 28 and a.days_since_install >=28 then b.id else null end))/count(distinct a.id) as ret_d28
 		
+		--I've removed D7/14/28 metrics from below for readability
 		--arpi metrics
 		,sum(case when c.rev_date-a.install_date = 1  and a.days_since_install >=1  then c.rev else 0 end)/count(distinct a.id) as arpi_d1
-		,sum(case when c.rev_date-a.install_date = 7  and a.days_since_install >=7  then c.rev else 0 end)/count(distinct a.id) as arpi_d7
-		,sum(case when c.rev_date-a.install_date = 14  and a.days_since_install >=14  then c.rev else 0 end)/count(distinct a.id) as arpi_d14
-		,sum(case when c.rev_date-a.install_date = 28  and a.days_since_install >=28  then c.rev else 0 end)/count(distinct a.id) as arpi_d28
 		,sum(c.rev)/count(distinct a.id) as arpi_total
 		
 		--arppu metrics
 		,sum(case when c.rev_date-a.install_date = 1  and a.days_since_install >=1  then c.rev else 0 end)/count(distinct d.id) as arppu_d1
-		,sum(case when c.rev_date-a.install_date = 7  and a.days_since_install >=7  then c.rev else 0 end)/count(distinct d.id) as arppu_d7
-		,sum(case when c.rev_date-a.install_date = 14  and a.days_since_install >=14  then c.rev else 0 end)/count(distinct d.id) as arppu_d14
-		,sum(case when c.rev_date-a.install_date = 28  and a.days_since_install >=28  then c.rev else 0 end)/count(distinct d.id) as arppu_d28
 		,sum(c.rev)/count(distinct d.id) as arppu_total
 		
 		--customer conversion
 		,count(distinct(case when d.first_pay_date-a.install_date = 1  and a.days_since_install >=1  then d.id else null end))/count(distince a.id) as conv_d1
-		,count(distinct(case when d.first_pay_date-a.install_date = 7  and a.days_since_install >=7  then d.id else null end))/count(distince a.id) as conv_d7
-		,count(distinct(case when d.first_pay_date-a.install_date = 14  and a.days_since_install >=14  then d.id else null end))/count(distince a.id) as conv_d14
-		,count(distinct(case when d.first_pay_date-a.install_date = 28  and a.days_since_install >=28  then d.id else null end))/count(distince a.id) as conv_d28
 		,count(distinct d.id)/count(distinct a.id) as conv_total
 		
 	from install a

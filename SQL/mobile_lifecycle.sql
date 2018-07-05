@@ -42,7 +42,8 @@ with install as (
 	select
 		a.install_date
 		,count(distinct a.id) as installs
-		,sum(coalesce(b.ftue_start,0)) as ftue_start
+		--the coalescing is mostly helpful if there is no data joining at all (leaving a 0)
+		,sum(coalesce(b.ftue_start,0)) as ftue_start 
 		,sum(coalesce(b.ftue_end,0)) as ftue_end
 		,sum(coalesce(c.eng_menu,0)) as eng_menu
 		,sum(coalesce(c.eng_click,0)) as eng_click
